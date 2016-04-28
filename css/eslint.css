@@ -1,0 +1,14 @@
+.file-setting{
+    color: yellow;
+}
+#incallback,#outcallback{
+    margin-top:10px;
+    background-color: rgba(0,0,0,.5);
+}
+
+a {
+    color: #03BCF4;
+    &:hover {
+        color: #80F578;
+    }
+}
