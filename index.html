@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>V.eslint.cn by molee1905</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">V.eslint.cn</h1>
+      <h2 class="project-tagline">eslint 相关</h2>
+      <a href="https://github.com/molee1905/v.eslint.cn" class="btn">View on GitHub</a>
+      <a href="https://github.com/molee1905/v.eslint.cn/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/molee1905/v.eslint.cn/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="常见问题" class="anchor" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>常见问题</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">foo</span>(<span class="pl-smi">a</span>, <span class="pl-smi">b</span>, <span class="pl-smi">a</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>which a is it?<span class="pl-pds">"</span></span>, a);
+}</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> foo <span class="pl-k">=</span> {
+    bar<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>baz<span class="pl-pds">"</span></span>,
+    bar<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>qux<span class="pl-pds">"</span></span>
+};</pre></div>
+
+<pre><code>var foo = {
+    bar: "baz",
+    qux: "quux",
+};
+</code></pre>
+
+<pre><code>if(!a in b) {
+    // do something
+}
+</code></pre>
+
+<pre><code>typeof foo === "strnig"
+typeof foo == "undefimed"
+typeof bar != "nunber"
+typeof bar !== "fucntion"
+</code></pre>
+
+<pre><code>var object1 = {
+    "foo": "bar",
+    "baz": 42,
+    "qux-a": true
+};
+</code></pre>
+
+<pre><code>var object2 = {
+    'foo': "bar",
+    'baz': 42,
+    'qux-a': true
+};
+</code></pre>
+
+<pre><code>var object3 = {
+    foo: "bar",
+    baz: 42,
+    "qux-a": true
+};
+</code></pre>
+
+<pre><code>if (foo) {
+  bar();
+}
+else {
+  baz();
+}
+</code></pre>
+
+<pre><code>if (foo) {
+  bar();
+} else {
+  baz();
+}
+</code></pre>
+
+<pre><code>if (foo) 
+{
+  bar();
+} 
+else 
+{
+  baz();
+}
+
+</code></pre>
+
+<pre><code>var obj = {
+    a: value,
+    bcde:  42,
+    fg :   foo()
+};
+</code></pre>
+
+<pre><code>var obj = {
+    a   : value,
+    bcde: 42,
+    fg  : foo()
+};
+</code></pre>
+
+<pre><code>var obj = {
+    a    :value,
+    bcde :42,
+    fg   :foo()
+};
+</code></pre>
+
+<pre><code>var obj = {
+    a    : value,
+    bcde : 42,
+    fg   : foo()
+};
+</code></pre>
+
+<pre><code>var foo = 5;
+var bar = 3;
+
+</code></pre>
+
+<pre><code>var foo = 5;
+
+
+var bar = 3;
+
+</code></pre>
+
+<pre><code>var foo = 5;
+
+
+
+
+
+var bar = 3;
+
+</code></pre>
+
+<pre><code>function foo() {
+    var bar;
+    var baz;
+    let qux;
+    let norf;
+}
+</code></pre>
+
+<pre><code>function foo() {
+    var bar,
+        baz;
+    let qux,
+        norf;
+}
+</code></pre>
+
+<pre><code>function withoutSpace(x) {
+    // ...
+}
+
+function withSpace (x) {
+    // ...
+}
+</code></pre>
+
+<pre><code>foo --;
+
+foo--;
+</code></pre>
+
+<h1>
+<a id="js代码检测" class="anchor" href="#js%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>js代码检测</h1>
+
+<ul>
+<li>保持风格一致</li>
+<li>提高可读性</li>
+<li>减少潜在的错误</li>
+<li>最佳实践</li>
+</ul>
+
+<h1>
+<a id="eslint" class="anchor" href="#eslint" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ESLint</h1>
+
+<p><img src="http://v.eslint.cn/img/nzakas.png" alt="Nicholas"></p>
+
+<h3>
+<a id="nicholas-c-zakas" class="anchor" href="#nicholas-c-zakas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/nzakas">Nicholas C. Zakas</a>
+</h3>
+
+<h1>
+<a id="今天聊一聊" class="anchor" href="#%E4%BB%8A%E5%A4%A9%E8%81%8A%E4%B8%80%E8%81%8A" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>今天聊一聊</h1>
+
+<ul>
+<li>eslint 是什么</li>
+<li>eslint 安装&amp;配置</li>
+<li>eslint 集成</li>
+<li>eslint 规则&amp;插件</li>
+<li>eslint 中文</li>
+<li>eslint 架构</li>
+<li>eslint 自动修复</li>
+<li>eslint 存在的问题</li>
+<li>为什么选择 eslint</li>
+<li>eslint 未来</li>
+</ul>
+
+<h2>
+<a id="eslint-是什么" class="anchor" href="#eslint-%E6%98%AF%E4%BB%80%E4%B9%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ESLint 是什么</h2>
+
+<p>The pluggable linting utility for JavaScript and JSX</p>
+
+<p>在这里你只需知道 ESLint 可以进行代码检测即可。稍后再看pluggable</p>
+
+<h2>
+<a id="安装和配置" class="anchor" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>安装和配置</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ node install -g eslint
+</pre></div>
+
+<p>创建配置文件 <strong>.eslintrc.</strong>*</p>
+
+<div class="highlight highlight-source-shell"><pre>$ eslint --init
+</pre></div>
+
+<div class="highlight highlight-source-js"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>env<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+        <span class="pl-s"><span class="pl-pds">"</span>browser<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        <span class="pl-s"><span class="pl-pds">"</span>node<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">true</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>globals<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+        <span class="pl-s"><span class="pl-pds">"</span>VUE<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        <span class="pl-s"><span class="pl-pds">"</span>__inline<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">false</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>parserOptions<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+        <span class="pl-s"><span class="pl-pds">"</span>ecmaFeatures<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+            <span class="pl-s"><span class="pl-pds">"</span>jsx<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">true</span>
+        }
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>plugins<span class="pl-pds">"</span></span><span class="pl-k">:</span> [
+        <span class="pl-s"><span class="pl-pds">"</span>plugin1<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>eslint-plugin-plugin2<span class="pl-pds">"</span></span>
+    ],
+    <span class="pl-s"><span class="pl-pds">"</span>rules<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+        <span class="pl-s"><span class="pl-pds">"</span>strict<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>off<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>no-loop-func<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>warn<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>semi<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>error<span class="pl-pds">"</span></span>
+    }
+}</pre></div>
+
+<p><strong>注意:</strong> "error"错误，"warn"警告，"off"关闭</p>
+
+<h2>
+<a id="eslintrc-优先级" class="anchor" href="#eslintrc-%E4%BC%98%E5%85%88%E7%BA%A7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.eslintrc.* 优先级</h2>
+
+<ol>
+<li><strong>.eslintrc.js</strong></li>
+<li><strong>.eslintrc.yaml</strong></li>
+<li><strong>.eslintrc.yml</strong></li>
+<li><strong>.eslintrc.json</strong></li>
+<li><strong><del>.eslintrc</del></strong></li>
+<li><strong>package.json</strong></li>
+</ol>
+
+<h2>
+<a id="eslint-config-for-sm" class="anchor" href="#eslint-config-for-sm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/smocean/eslint-config-sm">eslint config for sm</a>
+</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ node install -g eslint-config-sm </pre></div>
+
+<p>配置文件 <strong>.eslintrc.</strong>*</p>
+
+<div class="highlight highlight-source-json"><pre>{
+   <span class="pl-s"><span class="pl-pds">"</span>extends<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>sm<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<p>node环境：</p>
+
+<div class="highlight highlight-source-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>extends<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>sm/node-config<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<p>那么现在再回顾一下 ESLint 描述中的 pluggable，有没有真正体会到！</p>
+
+<h2>
+<a id="配置层叠和继承" class="anchor" href="#%E9%85%8D%E7%BD%AE%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>配置层叠和继承</h2>
+
+<div class="highlight highlight-source-js"><pre>app
+├── .<span class="pl-smi">eslintrc</span>
+├── lib
+│ └── <span class="pl-smi">source</span>.<span class="pl-smi">js</span>
+└─┬ tests
+  ├── .<span class="pl-smi">eslintrc</span>
+  └── <span class="pl-smi">test</span>.<span class="pl-smi">js</span></pre></div>
+
+<h1>
+<a id="集成" class="anchor" href="#%E9%9B%86%E6%88%90" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://eslint.cn/docs/user-guide/integrations">集成</a>
+</h1>
+
+<ul>
+<li><a href="http://eslint.cn/docs/user-guide/integrations#command-line-tools">cmd</a></li>
+<li><a href="https://github.com/roadhump/SublimeLinter-eslint">Sublime Text 3</a></li>
+<li><a href="https://github.com/scrooloose/syntastic/tree/master/syntax_checkers/javascript">Vim</a></li>
+<li>IntelliJ IDEA, WebStorm</li>
+<li>Visual Studio Code</li>
+<li>...</li>
+</ul>
+
+<h2>
+<a id="cmd-eslint-nibble" class="anchor" href="#cmd-eslint-nibble" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>cmd: <a href="https://github.com/IanVS/eslint-nibble">eslint-nibble</a>
+</h2>
+
+<p><img src="http://v.eslint.cn/img/eslint-cmd.png" alt="http://v.eslint.cn/img/eslint-cmd.png">
+<img src="http://v.eslint.cn/img/eslint-nibble.png" alt="http://v.eslint.cn/img/eslint-nibble.png"></p>
+
+<h2>
+<a id="sublime-text-3" class="anchor" href="#sublime-text-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/smocean/eslint-config-sm">Sublime Text 3</a>
+</h2>
+
+<p><img src="http://v.eslint.cn/img/sublime.png" alt="http://v.eslint.cn/img/sublime.png"></p>
+
+<h2>
+<a id="eslint中文" class="anchor" href="#eslint%E4%B8%AD%E6%96%87" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ESLint中文</h2>
+
+<ul>
+<li><a href="http://eslint.cn">http://eslint.cn</a></li>
+<li><a href="http://cn.eslint.org">http://cn.eslint.org</a></li>
+<li><a href="http://weibo.com/eslint">http://weibo.com/eslint</a></li>
+<li>QQ: 523034328</li>
+</ul>
+
+<h3>
+<a id="贡献者" class="anchor" href="#%E8%B4%A1%E7%8C%AE%E8%80%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>贡献者</h3>
+
+<ul>
+<li><a href="https://github.com/coocon">@coocon</a></li>
+<li><a href="https://github.com/cssmagic">@cssmagic</a></li>
+<li><a href="https://github.com/DavidDong93">@DavidDong93</a></li>
+<li><a href="https://github.com/fengnana">@fengnana</a></li>
+<li><a href="https://github.com/freeyiyi1993">@freeyiyi1993</a></li>
+<li><a href="https://github.com/ILFront-End">@ILFront-End</a></li>
+<li><a href="https://github.com/hacke2">@hacke2</a></li>
+<li><a href="https://github.com/maomaoking">@maomaoking</a></li>
+<li><a href="https://github.com/maoshuyu">@maoshuyu</a></li>
+<li><a href="http://github.com/molee1905">@molee1905</a></li>
+<li><a href="https://github.com/qifeigit">@qifeigit</a></li>
+<li><a href="https://github.com/summart">@summart</a></li>
+<li><a href="https://github.com/sunshiner">@sunshiner</a></li>
+<li><a href="https://github.com/wqllpw">@wqllpw</a></li>
+<li><a href="https://github.com/xkf521">@xkf521</a></li>
+<li><a href="https://github.com/yanggao40">@yanggao40</a></li>
+<li><a href="https://github.com/ybbjegj">@ybbjegj</a></li>
+</ul>
+
+<h1>
+<a id="高阶" class="anchor" href="#%E9%AB%98%E9%98%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>高阶</h1>
+
+<h2>
+<a id="架构" class="anchor" href="#%E6%9E%B6%E6%9E%84" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>架构</h2>
+
+<p><img src="http://v.eslint.cn/img/architecture.png" alt="http://v.eslint.cn/img/architecture.png"></p>
+
+<h2>
+<a id="自动修复" class="anchor" href="#%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>自动修复</h2>
+
+<p><img src="http://v.eslint.cn/img/message.png" alt="http://v.eslint.cn/img/message.png">
+<img src="http://v.eslint.cn/img/fix.png" alt="http://v.eslint.cn/img/fix.png"></p>
+
+<h3>
+<a id="可修复的规则" class="anchor" href="#%E5%8F%AF%E4%BF%AE%E5%A4%8D%E7%9A%84%E8%A7%84%E5%88%99" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>可修复的规则</h3>
+
+<ul>
+<li><a href="http://eslint.cn/docs/rules/no-extra-semi">no-extra-semi</a></li>
+<li><a href="http://eslint.cn/docs/rules/no-multi-spaces">no-multi-spaces</a></li>
+<li><a href="http://eslint.cn/docs/rules/array-bracket-spacing">array-bracket-spacing</a></li>
+<li><a href="http://eslint.cn/docs/rules/block-spacing">block-spacing</a></li>
+<li><a href="http://eslint.cn/docs/rules/comma-spacing">comma-spacing</a></li>
+<li><a href="http://eslint.cn/docs/rules/computed-property-spacing">computed-property-spacing</a></li>
+<li><a href="http://eslint.cn/docs/rules/eol-last">eol-last</a></li>
+<li><a href="http://eslint.cn/docs/rules/jsx-quotes">jsx-quotes</a></li>
+<li><a href="http://eslint.cn/docs/rules/indent">indent</a></li>
+<li><a href="http://eslint.cn/docs/rules/keyword-spacing">keyword-spacing</a></li>
+<li><a href="http://eslint.cn/docs/rules/linebreak-style">linebreak-style</a></li>
+<li><a href="http://eslint.cn/docs/rules/no-spaced-func">no-spaced-func</a></li>
+<li><a href="http://eslint.cn/docs/rules/no-trailing-spaces">no-trailing-spaces</a></li>
+<li><a href="http://eslint.cn/docs/rules/object-curly-spacing">object-curly-spacing</a></li>
+<li><a href="http://eslint.cn/docs/rules/quotes">quotes</a></li>
+<li><a href="http://eslint.cn/docs/rules/semi">semi</a></li>
+<li><a href="http://eslint.cn/docs/rules/space-before-blocks">space-before-blocks</a></li>
+<li><a href="http://eslint.cn/docs/rules/space-before-function-paren">space-before-function-paren</a></li>
+<li><a href="http://eslint.cn/docs/rules/space-in-parens">space-in-parens</a></li>
+<li><a href="http://eslint.cn/docs/rules/space-infix-ops">space-infix-ops</a></li>
+<li><a href="http://eslint.cn/docs/rules/space-unary-ops">space-unary-ops</a></li>
+<li><a href="http://eslint.cn/docs/rules/spaced-comment">spaced-comment</a></li>
+<li><a href="http://eslint.cn/docs/rules/constructor-super">constructor-super</a></li>
+<li><a href="http://eslint.cn/docs/rules/template-curly-spacing">template-curly-spacing</a></li>
+<li><a href="http://eslint.cn/docs/rules/yield-star-spacing">yield-star-spacing</a></li>
+</ul>
+
+<h2>
+<a id="规则--插件" class="anchor" href="#%E8%A7%84%E5%88%99--%E6%8F%92%E4%BB%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>规则 &amp; 插件</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install -g yo
+
+$ npm i -g generator-eslint
+</pre></div>
+
+<p>创建插件:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ yo eslint:plugin
+</pre></div>
+
+<p>创建规则:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ yo eslint:rule
+</pre></div>
+
+<p><strong>练练手呗</strong></p>
+
+<h2>
+<a id="ast" class="anchor" href="#ast" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AST</h2>
+
+<ul>
+<li><a href="https://github.com/estree/estree/blob/master/spec.md">estree</a></li>
+<li><a href="https://github.com/jquery/esprima/blob/master/src/syntax.ts">esprima</a></li>
+<li><a href="https://github.com/ternjs/acorn">acorn</a></li>
+<li><a href="https://github.com/eslint/espree">expree</a></li>
+</ul>
+
+<h2>
+<a id="自动修复存在的问题" class="anchor" href="#%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>自动修复存在的问题</h2>
+
+<p>我们来看一下自动修复的源码：</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// sort in reverse order of occurrence</span>
+<span class="pl-smi">fixes</span>.<span class="pl-c1">sort</span>(<span class="pl-k">function</span>(<span class="pl-smi">a</span>, <span class="pl-smi">b</span>) {
+    <span class="pl-k">if</span> (<span class="pl-smi">a</span>.<span class="pl-smi">fix</span>.<span class="pl-smi">range</span>[<span class="pl-c1">1</span>] <span class="pl-k">&lt;=</span> <span class="pl-smi">b</span>.<span class="pl-smi">fix</span>.<span class="pl-smi">range</span>[<span class="pl-c1">0</span>]) {
+        <span class="pl-k">return</span> <span class="pl-c1">1</span>;
+    } <span class="pl-k">else</span> {
+        <span class="pl-k">return</span> <span class="pl-k">-</span><span class="pl-c1">1</span>;
+    }
+});
+
+<span class="pl-c">// split into array of characters for easier manipulation</span>
+<span class="pl-k">var</span> chars <span class="pl-k">=</span> <span class="pl-smi">text</span>.<span class="pl-c1">split</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);
+
+<span class="pl-smi">fixes</span>.<span class="pl-en">forEach</span>(<span class="pl-k">function</span>(<span class="pl-smi">problem</span>) {
+    <span class="pl-k">var</span> fix <span class="pl-k">=</span> <span class="pl-smi">problem</span>.<span class="pl-smi">fix</span>;
+
+    <span class="pl-k">if</span> (<span class="pl-smi">fix</span>.<span class="pl-smi">range</span>[<span class="pl-c1">1</span>] <span class="pl-k">&lt;</span> lastFixPos) {
+        <span class="pl-smi">chars</span>.<span class="pl-c1">splice</span>(<span class="pl-smi">fix</span>.<span class="pl-smi">range</span>[<span class="pl-c1">0</span>], <span class="pl-smi">fix</span>.<span class="pl-smi">range</span>[<span class="pl-c1">1</span>] <span class="pl-k">-</span> <span class="pl-smi">fix</span>.<span class="pl-smi">range</span>[<span class="pl-c1">0</span>], <span class="pl-smi">fix</span>.<span class="pl-c1">text</span>);
+        lastFixPos <span class="pl-k">=</span> <span class="pl-smi">fix</span>.<span class="pl-smi">range</span>[<span class="pl-c1">0</span>];
+    } <span class="pl-k">else</span> {
+        <span class="pl-smi">remainingMessages</span>.<span class="pl-c1">push</span>(problem);
+    }
+});</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> fixes <span class="pl-k">=</span> [
+    {range<span class="pl-k">:</span> [<span class="pl-c1">10</span>, <span class="pl-c1">10</span>]},
+    {range<span class="pl-k">:</span> [<span class="pl-c1">11</span>, <span class="pl-c1">15</span>]},
+    {range<span class="pl-k">:</span> [<span class="pl-c1">11</span>, <span class="pl-c1">16</span>]}
+];</pre></div>
+
+<p>降序排列：</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> fixes <span class="pl-k">=</span> [
+    {range<span class="pl-k">:</span> [<span class="pl-c1">11</span>, <span class="pl-c1">15</span>]},
+    {range<span class="pl-k">:</span> [<span class="pl-c1">11</span>, <span class="pl-c1">16</span>]},
+    {range<span class="pl-k">:</span> [<span class="pl-c1">10</span>, <span class="pl-c1">10</span>]}
+];</pre></div>
+
+<ol>
+<li>不能保证所有的修复都被应用到。</li>
+<li>可能与其它规则冲突。例如，一个规则能插入逗号，然而另一个规则要求逗号后面有空格。要求有空格的规则并不知道一个新的逗号被加了进来，因为在规则执行后它就结束了。</li>
+<li>可能改变作用的评估。例如，将函数或语句块内的 var 改为 const。可能导致整个规则无效，因为在遍历前，作用域的计算已经结束。</li>
+<li>一个修复如果改变了代码的含义，很有可能导致程序出错。</li>
+</ol>
+
+<p>作者自我反思整个项目的设计决策：</p>
+
+<ol>
+<li>自动修复模式应该只进行修复，无需关心不可修复的规则。但是现在，它既扮演者 lint 的角色，也会输出消息。这似乎是不必要的。</li>
+<li>目前的修复是基于文本的修复，对于自动修复太过天真。很明显，基于文本的修复可伸缩性很差。</li>
+<li>试图将自动修复融入到单一遍历系统的检测过程中，显得力不从心。</li>
+</ol>
+
+<h2>
+<a id="eslint-30" class="anchor" href="#eslint-30" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ESLint 3.0</h2>
+
+<p>目前可查看multipass分支</p>
+
+<p><img src="http://v.eslint.cn/img/fix-more-gt-slower.png" alt="http://v.eslint.cn/img/fix-more-gt-slower.png"></p>
+
+<h2>
+<a id="为什么选择-eslint" class="anchor" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9-eslint" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>为什么选择 eslint</h2>
+
+<ul>
+<li>慕<a href="https://github.com/nzakas">名</a>而来</li>
+<li>规则数量丰富 (200+)</li>
+<li>自由定制</li>
+<li>支持扩展</li>
+<li>4月14号 <a href="https://github.com/jscs-dev/node-jscs">jscs</a><a href="http://eslint.org/blog/2016/04/welcoming-jscs-to-eslint">加入</a> eslint</li>
+</ul>
+
+<p><img src="http://v.eslint.cn/img/do-u-use-eslint.png" alt="http://v.eslint.cn/img/do-u-use-eslint.png"></p>
+
+<h2>
+<a id="eslint-未来" class="anchor" href="#eslint-%E6%9C%AA%E6%9D%A5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>eslint 未来</h2>
+
+<p><a href="http://eslint.org/blog/2016/04/eslint-joins-the-jquery-foundation">ESLint 加入了 jQuery 基金会</a></p>
+
+<p>在文中，作者说到：一个开源项目达到一定的普及程度之后，维护者就有责任确保它有持续良好的社区，以生存发展下去。在过去几年，一些很重要的项目都出现了问题：YUI不再进行维护，Node.js分裂，Express也变得杂乱无序。社区变得混乱不堪，无所附依。于是就加入了jQuery 基金会，避免 ESLint 重蹈覆辙。jQuery 基金会 门下有很多伟大的项目，比如 jQuery 和 Esprima，在和 Dojo 基金会合并之后，也囊括了Lodash 和 Grunt 等。作者谦虚地说道，能与这些重要而且有影响力的项目为伍，感到自豪。</p>
+
+<p>那么加入jQuery 基金会，可以确保以下几个事情：</p>
+
+<ol>
+<li>项目不会因为作者本人离开而停止。虽然作者并没计划离开，但，纵观历史，开源项目的创始人最终离开自己的项目甚是常见。从John Resig 离开 jQuery 到 Ryan Dahl 离开 Node.js，作者无法想象自己也会走他们走过的路。</li>
+<li>ESLint 将永远不会卖给某个公司。从  Node.js 和 Express 事件看来，这种关系并不总是一帆风顺。ESLint 社区应该得到承诺，依赖 ESLint 是安全的，是没有问题的。</li>
+<li>ESLint 项目将继续跟进与开源有关的最新的最佳实践和合法建议。</li>
+</ol>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/molee1905/v.eslint.cn">V.eslint.cn</a> is maintained by <a href="https://github.com/molee1905">molee1905</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
