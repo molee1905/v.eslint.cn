@@ -500,7 +500,7 @@ fixes.forEach(function(problem) {
 
 ```js
 var fixes = [
-    {range: [10, 10]},
+    {range: [9, 10]},
     {range: [11, 15]},
     {range: [11, 16]}
 ];
@@ -510,7 +510,7 @@ var fixes = [
 var fixes = [
     {range: [11, 15]},
     {range: [11, 16]},
-    {range: [10, 10]}
+    {range: [9, 10]}
 ];
 ```
 
@@ -518,7 +518,7 @@ var fixes = [
 
 1. 不能保证所有的修复都被应用到。
 2. 可能与其它规则冲突。
-3. 可能改变作用的评估。
+3. 可能改变作用域的评估。
 4. 一个修复如果改变了代码的含义，很有可能导致程序出错。
 
 [slide]
