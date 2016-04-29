@@ -42,7 +42,7 @@ var foo = {
 ```
 
 ```
-if(!a in b) {
+if (!a in b) {
     // do something
 }
 ```
